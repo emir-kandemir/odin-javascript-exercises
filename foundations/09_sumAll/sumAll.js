@@ -1,9 +1,14 @@
-const sumAll = function (stRange, endRange) {
+const sumAll = function (start, end) {
   let numArr = [];
-  for (let i = stRange; i <= endRange; i++) {
-    numArr.push(i);
+  if (start > end) {
+    for (let i = end; i <= start; i++) {
+      numArr.push(i);
+    }
+  } else {
+    for (i = start; i <= end; i++) {
+      numArr.push(i);
+    }
   }
-  console.log(numArr.sort());
   const reduceAll = numArr.reduce((total, currentItem) => {
     return total + currentItem;
   });
