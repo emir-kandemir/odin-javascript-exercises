@@ -1,13 +1,13 @@
-const sumAll = require('./sumAll')
+const sumAll = require('./sumAll');
 
 describe('sumAll', () => {
   test('sums numbers within the range', () => {
     expect(sumAll(2, 4)).toEqual(9);
   });
-  test.skip('works with large numbers', () => {
+  test('works with large numbers', () => {
     expect(sumAll(1, 4000)).toEqual(8002000);
   });
-  test.skip('works with larger number first', () => {
+  test('works with larger number first', () => {
     expect(sumAll(123, 1)).toEqual(7626);
   });
   test.skip('returns ERROR with negative numbers', () => {
@@ -17,7 +17,7 @@ describe('sumAll', () => {
     expect(sumAll(2.5, 4)).toEqual('ERROR');
   });
   test.skip('returns ERROR with non-number parameters', () => {
-    expect(sumAll(10, "90")).toEqual('ERROR');
+    expect(sumAll(10, '90')).toEqual('ERROR');
   });
   test.skip('returns ERROR with non-number parameters', () => {
     expect(sumAll(10, [90, 1])).toEqual('ERROR');
