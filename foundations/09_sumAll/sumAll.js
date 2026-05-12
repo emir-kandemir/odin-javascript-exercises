@@ -2,12 +2,7 @@ const sumAll = function (start, end) {
   let numArr = [];
   if (start < 0 || end < 0) {
     return 'ERROR';
-  } else if (
-    Number.isInteger(start) === false ||
-    Number.isInteger(end) === false
-  ) {
-    return 'ERROR';
-  } else if (isNaN(start) || isNaN(end)) {
+  } else if (!Number.isInteger(start) || !Number.isInteger(end)) {
     return 'ERROR';
   } else if (start > end) {
     for (let i = end; i <= start; i++) {
