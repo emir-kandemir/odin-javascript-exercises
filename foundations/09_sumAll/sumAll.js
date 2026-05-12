@@ -7,6 +7,8 @@ const sumAll = function (start, end) {
     Number.isInteger(end) === false
   ) {
     return 'ERROR';
+  } else if (isNaN(start) || isNaN(end)) {
+    return 'ERROR';
   } else if (start > end) {
     for (let i = end; i <= start; i++) {
       numArr.push(i);
