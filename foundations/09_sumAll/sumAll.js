@@ -1,6 +1,8 @@
 const sumAll = function (start, end) {
   let numArr = [];
-  if (start > end) {
+  if (start < 0 || end < 0) {
+    return 'ERROR';
+  } else if (start > end) {
     for (let i = end; i <= start; i++) {
       numArr.push(i);
     }
@@ -9,12 +11,12 @@ const sumAll = function (start, end) {
       numArr.push(i);
     }
   }
+
   const reduceAll = numArr.reduce((total, currentItem) => {
     return total + currentItem;
   });
   return reduceAll;
 };
 // debugger;
-console.log(sumAll(5, 3));
 // Do not edit below this line
 module.exports = sumAll;
