@@ -1,15 +1,24 @@
-const sumAll = function (stRange, endRange) {
+const sumAll = function (start, end) {
   let numArr = [];
-  for (let i = stRange; i <= endRange; i++) {
-    numArr.push(i);
+  if (start < 0 || end < 0) {
+    return 'ERROR';
+  } else if (!Number.isInteger(start) || !Number.isInteger(end)) {
+    return 'ERROR';
+  } else if (start > end) {
+    for (let i = end; i <= start; i++) {
+      numArr.push(i);
+    }
+  } else {
+    for (i = start; i <= end; i++) {
+      numArr.push(i);
+    }
   }
-  console.log(numArr.sort());
+
   const reduceAll = numArr.reduce((total, currentItem) => {
     return total + currentItem;
   });
   return reduceAll;
 };
 // debugger;
-console.log(sumAll(5, 3));
 // Do not edit below this line
 module.exports = sumAll;
