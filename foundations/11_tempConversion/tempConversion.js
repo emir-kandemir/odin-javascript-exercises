@@ -4,7 +4,8 @@ const convertToCelsius = function (temperature) {
 };
 
 const convertToFahrenheit = function (temperature) {
-  return (temperature * 9) / 5 + 32;
+  let result = (temperature * 9) / 5 + 32;
+  return parseFloat(result.toFixed(1));
 };
 
 // Do not edit below this line
