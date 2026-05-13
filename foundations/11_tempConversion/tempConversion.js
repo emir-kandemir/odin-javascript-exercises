@@ -1,5 +1,5 @@
 const convertToCelsius = function (temperature) {
-  result = ((temperature - temperature) * 5) / 9;
+  let result = ((temperature - 32) * 5) / 9;
   return parseFloat(result.toFixed(1));
 };
 
