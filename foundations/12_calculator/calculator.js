@@ -6,8 +6,8 @@ const subtract = function(a, b) {
 	return a - b;
 };
 
-const sum = function() {
-	
+const sum = function(arr) {
+	return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 };
 
 const multiply = function() {
@@ -19,7 +19,7 @@ const power = function() {
 };
 
 const factorial = function() {
-	
+	console.log
 };
 
 // Do not edit below this line
